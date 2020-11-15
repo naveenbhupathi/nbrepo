@@ -25,7 +25,7 @@ class CachedDict(dict):
         if not exists:
             check if cache memory is free:
                 if cache memory is free:
-                    insert function with corresponding result, its current timestamp and frequency of occurence
+                    insert function with corresponding result, its current timestamp and frequency of occurrence
                     of the function.
                 if cache memory is full:
                     1. fetch old timestamp exists in cache,
@@ -34,6 +34,9 @@ class CachedDict(dict):
         if key exists:
             increment frequency of the key and update latest timestamp for the key in the cache
     """
+
+    def clear_cache(self):
+        self.clear()
 
     def cacheIt(self, key, value):
 
@@ -101,3 +104,7 @@ if __name__ == '__main__':
     print(cd.cacheIt('b', 16))
     time.sleep(1)
     print(cd.cacheIt('e', 2))
+
+    cd.clear_cache()
+
+    print(cd.cacheIt('s', 2))
