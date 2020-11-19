@@ -89,7 +89,7 @@ if __name__ == '__main__':
     print(cd.cacheIt('c', 10))
     time.sleep(2)
     print("------------")
-    print(cd.cacheIt('d', 12))
+    print(cd.cacheIt('d', [1,2,3,4]))
     print("------------")
     print(cd.cacheIt('a', 10))
     print("------------")
@@ -107,4 +107,4 @@ if __name__ == '__main__':
 
     cd.clear_cache()
 
-    print(cd.cacheIt('s', 2))
+    print(cd.cacheIt('s', {'a':1, 'b':2}))
