@@ -17,5 +17,5 @@ def test_cacheIt(cd):
     time.sleep(1)
     assert cd.cacheIt('a', 13) == '<CachedItem {a:13} last updated with frequency 2>'
     time.sleep(1)
-    assert cd.cacheIt('c', 13) == '<CachedItem {c:13} last updated with frequency 3>'
-    assert cd.cacheIt('f', 13) == '<CachedItem {f:13} last updated with frequency 1>'
+    assert cd.cacheIt('c', [1, 2, 3]) == '<CachedItem {c:[1, 2, 3]} last updated with frequency 3>'
+    assert cd.cacheIt('f', {'a': 1, 'b': 2}) == '<CachedItem {f:{\'a\': 1, \'b\': 2}} last updated with frequency 1>'
